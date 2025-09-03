@@ -28,7 +28,7 @@ class FleetStream(CanTrackOspreyStream):
         th.Property(
             "equipmentHeader",
             th.ObjectType(
-                th.Property("unitInstallDateTime", th.DateTimeType),
+                th.Property("unitInstallDateTime", th.StringType),
                 th.Property("unitInstallDateTimeSpecified", th.BooleanType),
                 th.Property("oemName", th.StringType),
                 th.Property("fleetClientAccount", th.StringType),
@@ -42,7 +42,7 @@ class FleetStream(CanTrackOspreyStream):
             "averageLoadFactorLast24",
             th.ObjectType(
                 th.Property("percent", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -54,49 +54,49 @@ class FleetStream(CanTrackOspreyStream):
                 th.Property("altitudeSpecified", th.BooleanType),
                 th.Property("altitudeUnits", th.NumberType),
                 th.Property("altitudeUnitsSpecified", th.BooleanType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativeActiveRegenerationHours",
             th.ObjectType(
                 th.Property("hour", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativeIdleHours",
             th.ObjectType(
                 th.Property("hour", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativeIdleNonOperatingHours",
             th.ObjectType(
                 th.Property("hour", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativeLoadCount",
             th.ObjectType(
                 th.Property("count", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativeOperatingHours",
             th.ObjectType(
                 th.Property("hour", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
             "cumulativePowerTakeOffHours",
             th.ObjectType(
                 th.Property("hour", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -104,7 +104,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("payloadUnits", th.NumberType),
                 th.Property("payload", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -115,7 +115,7 @@ class FleetStream(CanTrackOspreyStream):
                 th.Property("defTankCapacityUnitsSpecified", th.BooleanType),
                 th.Property("defTankCapacity", th.NumberType),
                 th.Property("defTankCapacitySpecified", th.BooleanType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -123,7 +123,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("odometerUnits", th.StringType),
                 th.Property("odometer", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -131,7 +131,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("engineNumber", th.StringType),
                 th.Property("running", th.BooleanType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -139,7 +139,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("fuelUnits", th.NumberType),
                 th.Property("fuelConsumed", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -147,7 +147,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("fuelUnits", th.NumberType),
                 th.Property("fuelConsumed", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -158,7 +158,7 @@ class FleetStream(CanTrackOspreyStream):
                 th.Property("fuelTankCapacityUnitsSpecified", th.BooleanType),
                 th.Property("fuelTankCapacity", th.NumberType),
                 th.Property("fuelTankCapacitySpecified", th.BooleanType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -166,7 +166,7 @@ class FleetStream(CanTrackOspreyStream):
             th.ObjectType(
                 th.Property("speedUnits", th.StringType),
                 th.Property("speedValue", th.NumberType),
-                th.Property("dateTime", th.DateTimeType),
+                th.Property("dateTime", th.StringType),
             ),
         ),
         th.Property(
@@ -179,7 +179,7 @@ class FleetStream(CanTrackOspreyStream):
                 th.Property("accelerationScore", th.NumberType),
                 th.Property("breakingScore", th.NumberType),
                 th.Property("corneringScore", th.NumberType),
-                th.Property("date", th.DateTimeType),
+                th.Property("date", th.StringType),
             ),
         ),
     ).to_dict()
