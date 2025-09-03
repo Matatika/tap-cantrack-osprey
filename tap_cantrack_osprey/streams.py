@@ -14,7 +14,7 @@ class FleetStream(CanTrackOspreyStream):
 
     # Schema describes a *single equipment row* (not an array)
     schema = th.PropertiesList(
-        th.Property("snapshotTime", th.DateTimeType),
+        th.Property("snapshotTime", th.StringType),
         th.Property("version", th.NumberType),
         th.Property(
             "links",
